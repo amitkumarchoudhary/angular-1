@@ -1,6 +1,6 @@
 
 
-app.service('employeeService', function($http, $window) {
+app.service('leftContainerService', function($http,$window) {
 
     this.dddata=null;
     this.saveService = function (empdata) {
@@ -28,11 +28,14 @@ app.service('employeeService', function($http, $window) {
         // });
 
     this.getAllDetailsService = function () {
-        $http.get("http://localhost:9090/employee/details").then(function(response){
-            //console.log("response..."+JSON.stringify(response));
-            this.dddata=JSON.stringify(response.data);;
-        return this.dddata;
-        });
+        // $http.get("http://localhost:9090/employee/details").then(function(response){
+        //     //console.log("response..."+JSON.stringify(response));
+        //     this.dddata=JSON.stringify(response.data);;
+        // // return this.dddata;
+        // return response.data;
+        // return $http.get("http://localhost:9090/employee/details");
+        // });
+        return $http.get("http://localhost:9090/employee/details");
     }
 
    //var fff= this.getAllDetailsService();
