@@ -5,7 +5,7 @@ app.config(function($routeProvider) {
     .when('/', {
         templateUrl : "../js/homecontainer/leftcontainer/leftcontainer.html"
     })
-    .when('#/red', {
+    .when('/red', {
         templateUrl : "../js/homecontainer/leftcontainer/leftcontainer.html"
     })
     .when('/green', {
